@@ -1,11 +1,11 @@
 document.getElementById("redeemBtn").addEventListener("click", function() {
-  const code = document.getElementById("codeInput").value.trim();
+  const code = document.getElementById("codeInput").value.trim().toLowerCase();
   const message = document.getElementById("message");
 
-  // Example valid codes
-  const validCodes = ["GTIC2025", "WELCOME", "FREEITEM"];
+  // Valid codes (all lowercase)
+  const validCodes = ["coolio", "meanie"];
 
-  if(validCodes.includes(code.toUpperCase())) {
+  if(validCodes.includes(code)) {
     message.textContent = "✅ Code redeemed successfully!";
     message.style.color = "#00ff96";
   } else {
